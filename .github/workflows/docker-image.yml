@@ -39,7 +39,7 @@ jobs:
     - name: Construir y etiquetar la imagen de Docker
       run: |
         docker build -t frontend .
-        docker tag frotend acrandresmayor.azurecr.io/frontend:${{ github.sha }}
+        docker tag frontend acrandresmayor.azurecr.io/frontend:${{ github.sha }}
         
     - name: Subir imagen al ACR
       run: docker push acrandresmayor.azurecr.io/frontend:${{ github.sha }}
